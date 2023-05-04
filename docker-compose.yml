@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  net_node:
+    hostname: net_node
+    image: net_node
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        ROS_DISTRO: humble
+    environment:
+      - "PYTHONUNBUFFERED=1" # important to show error messages if a ros service crashes!
+    networks:
+    - net_test
+
+networks:
+  net_test:
+    external: true
