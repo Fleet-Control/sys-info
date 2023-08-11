@@ -1,7 +1,17 @@
 # Net Node
-ROS 2 Network information and configuration node.
+ROS 2 Network information node.
 
-Allows you to configure your ROS 2 robot network configuration via ROS itself.
+Allows you to get information on your ROS 2 robot via ROS 2 itself.
+
+## Installation
+
+Clone the repository in your ros-workspace and build using colcon:
+```bash
+cd ~/ros_ws/src
+git clone https://github.com/Fleet-Control/net-node.git
+colcon build
+```
+after successful installation re-source your ROS workspace.
 
 ## Usage
 
