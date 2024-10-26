@@ -17,7 +17,7 @@ after successful installation re-source your ROS workspace.
 
 Start the "NetNode" node
 ```bash
-ros2 run sys_node sys_node
+ros2 run sys_info sys_info
 ```
 
 Then you can get network information about the host system of your ROS2 node,

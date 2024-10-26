@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'sys_node'
+package_name = 'sys_info'
 
 setup(
     name=package_name,
@@ -21,7 +21,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'sys_node = sys_node.sys_node:main'
+            'sys_info = sys_info.sys_info:main'
         ],
     },
 )

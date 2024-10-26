@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-  sys_node:
-    hostname: sys_node
-    image: sys_node
+  sys_info:
+    hostname: sys_info
+    image: sys_info
     build:
       context: ./
       dockerfile: Dockerfile

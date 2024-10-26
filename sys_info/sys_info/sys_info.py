@@ -27,7 +27,7 @@ def get_network_info(ignore_virtual_devices: bool = True):
 
 class SysNode(Node):
     def __init__(self):
-        super().__init__('sys_node')
+        super().__init__('sys_info')
         self.get_logger().info('System information service ready')
         self.net_srv = self.create_service(
             NetworkInfo, 'net_info', self.get_network_info)
