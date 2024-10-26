@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-  net_node:
-    hostname: net_node
-    image: net_node
+  sys_node:
+    hostname: sys_node
+    image: sys_node
     build:
       context: ./
       dockerfile: Dockerfile
@@ -12,8 +12,8 @@ services:
     environment:
       - "PYTHONUNBUFFERED=1" # important to show error messages if a ros service crashes!
     networks:
-    - net_test
+    - sys_test
 
 networks:
-  net_test:
+  sys_test:
     external: true

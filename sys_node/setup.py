@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'net_node'
+package_name = 'sys_node'
 
 setup(
     name=package_name,
@@ -21,7 +21,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'net_node = net_node.net_node:main'
+            'sys_node = sys_node.sys_node:main'
         ],
     },
 )

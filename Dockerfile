@@ -18,7 +18,7 @@ ENTRYPOINT [ "/ros2_ws_entrypoint.sh" ]
 
 WORKDIR ${COLCON_WS}
 RUN mkdir -p ${COLCON_WS_SRC}
-COPY ./net_msgs ${COLCON_WS_SRC}/net_msgs
-COPY ./net_node ${COLCON_WS_SRC}/net_node
+COPY ./sys_msgs ${COLCON_WS_SRC}/sys_msgs
+COPY ./sys_node ${COLCON_WS_SRC}/sys_node
 RUN . /opt/ros/humble/setup.sh && cd ${COLCON_WS} && colcon build
-CMD [ "ros2", "run", "net_node", "net_node" ]
+CMD [ "ros2", "run", "sys_node", "sys_node" ]

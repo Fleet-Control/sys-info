@@ -2,8 +2,8 @@ import rclpy
 from netifaces import AF_INET, ifaddresses, interfaces
 from rclpy.node import Node
 
-from net_msgs.srv import NetworkInfo
-from net_msgs.msg import NetworkAddress, NetworkDevice
+from sys_msgs.srv import NetworkInfo
+from sys_msgs.msg import NetworkAddress, NetworkDevice
 
 
 def get_network_info(ignore_virtual_devices: bool = True):
@@ -25,12 +25,15 @@ def get_network_info(ignore_virtual_devices: bool = True):
     return netconfig
 
 
-class NetNode(Node):
+class SysNode(Node):
     def __init__(self):
-        super().__init__('net_node')
-        self.get_logger().info('Network service ready')
-        self.srv = self.create_service(
+        super().__init__('sys_node')
+        self.get_logger().info('System information service ready')
+        self.net_srv = self.create_service(
             NetworkInfo, 'net_info', self.get_network_info)
+        # TODO: system information service
+        # self.system_srv = self.create_service(
+        #    NetworkInfo, 'sys_info', self.get_system_info)
 
     def get_network_info(self, request, response):
         response.devices = []
@@ -48,7 +51,7 @@ class NetNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    nn = NetNode()
+    nn = SysNode()
     rclpy.spin(nn)
     nn.destroy_node()
     rclpy.shutdown()

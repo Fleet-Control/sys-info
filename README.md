@@ -1,5 +1,5 @@
-# Net Node
-ROS 2 Network information node.
+# System Node
+ROS 2 System information node.
 
 Allows you to get information on your ROS 2 robot via ROS 2 itself.
 
@@ -17,12 +17,12 @@ after successful installation re-source your ROS workspace.
 
 Start the "NetNode" node
 ```bash
-ros2 run net_node net_node
+ros2 run sys_node sys_node
 ```
 
 Then you can get network information about the host system of your ROS2 node,
 for example:
 
 ```bash
-ros2 service call /net_info net_msgs/srv/NetworkInfo
+ros2 service call /net_info sys_msgs/srv/NetworkInfo
 ```
