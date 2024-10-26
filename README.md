@@ -1,7 +1,7 @@
-# System Node
+# System Information Node
 ROS 2 System information node.
 
-Allows you to get information on your ROS 2 robot via ROS 2 itself.
+Allows you to get information on your ROS 2 robot system via ROS 2 itself.
 
 ## Installation
 
@@ -20,7 +20,7 @@ Start the "NetNode" node
 ros2 run sys_info sys_info
 ```
 
-Then you can get network information about the host system of your ROS2 node,
+Then you can get **network information** about the host system of your ROS2 node,
 for example:
 
 ```bash
