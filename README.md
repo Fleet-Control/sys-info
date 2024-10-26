@@ -15,12 +15,17 @@ after successful installation re-source your ROS workspace.
 
 ## Usage
 
-Start the "NetNode" node
+1. Start the System Info (sys_info) node
 ```bash
 ros2 run sys_info sys_info
 ```
 
-Then you can get **network information** about the host system of your ROS2 node,
+You should see the message
+```
+System information service ready.
+```
+
+When its running you can get **network information** about the host system of your ROS2 node,
 for example:
 
 ```bash
