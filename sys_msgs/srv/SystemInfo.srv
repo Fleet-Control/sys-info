@@ -1,4 +1,5 @@
 # System Information
+---
 NetworkDevice[] network_devices
 # TODO: detailed WiFi information by parsing /proc/net/wireless
 # TODO: Information about active I2C, GPIO etc.
