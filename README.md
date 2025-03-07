@@ -8,7 +8,7 @@ Allows you to get information on your ROS 2 robot system via ROS 2 itself.
 Clone the repository in your ros-workspace and build using colcon:
 ```bash
 cd ~/ros_ws/src
-git clone https://github.com/Fleet-Control/net-node.git
+git clone https://github.com/Fleet-Control/sys-info.git
 cd ~/ros_ws
 colcon build
 ```
