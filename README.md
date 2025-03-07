@@ -9,6 +9,7 @@ Clone the repository in your ros-workspace and build using colcon:
 ```bash
 cd ~/ros_ws/src
 git clone https://github.com/Fleet-Control/net-node.git
+cd ~/ros_ws
 colcon build
 ```
 after successful installation re-source your ROS workspace.
