@@ -28,3 +28,7 @@ def get_throttle_data(vcgm: Vcgencmd):
 
 def setup():
     return Vcgencmd() if VCGENCMD else None
+
+
+# TODO: measure_volts for more detailed CPU undervoltage issues
+# TOCO: check modules e.g. with lsmod as subprocess if i2c_bcm2835 and i2c_dev or spi_bcm2835 are active
