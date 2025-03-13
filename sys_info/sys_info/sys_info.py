@@ -8,7 +8,7 @@ from sys_msgs.srv import NetworkInfo, SystemInfo
 
 
 # TODO: detailed WiFi information by parsing /proc/net/wireless
-# TODO: Information about active I2C, GPIO etc.
+# TODO: Information about active I2C, GPIO etc. for Raspberry pi
 # TODO: current temperatures from sensors service (if available)
 # TODO: running processes, used memory and disc space
 # TODO: special rpi information like undervoltage information or temperatures
@@ -73,7 +73,7 @@ class SysNode(Node):
         net_info = get_network_info(True)
         response.devices = net_info_to_msg(net_info)
         return response
-    
+
     def get_system_info(self, request, response):
         sys_info = get_system_info(True)
         sys_info_to_msg(sys_info, response)
