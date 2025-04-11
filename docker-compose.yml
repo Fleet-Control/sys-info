@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   sys_info:
     hostname: sys_info
@@ -11,9 +9,5 @@ services:
         ROS_DISTRO: jazzy
     environment:
       - "PYTHONUNBUFFERED=1" # important to show error messages if a ros service crashes!
-    networks:
-    - sys_test
-
-networks:
-  sys_test:
-    external: true
+      - ROS_DOMAIN_ID=$ROS_DOMAIN_ID
+    network_mode: host
